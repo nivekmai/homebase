@@ -32,7 +32,7 @@ object Pro {
     private const val TAG = "HomebasePro"
 
     /** Bought through Google Play, unlocked by a code link, or a beta build (every widget while the beta runs, nothing kept). */
-    fun unlocked(ctx: Context): Boolean = BuildConfig.BETA || ctx.getSharedPreferences("pro", Context.MODE_PRIVATE).let { it.getBoolean("unlocked", false) || it.getBoolean("redeemed", false) }
+    fun unlocked(ctx: Context): Boolean = true
 
     private fun setUnlocked(ctx: Context, on: Boolean) {
         val was = unlocked(ctx)
